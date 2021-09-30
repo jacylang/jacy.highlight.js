@@ -1,0 +1,21 @@
+{
+  "name": "@jacy-lang/jacy.highlight.js",
+  "version": "0.1.0",
+  "description": "Jacy grammar for highlight.js",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacylang/jacy.highlight.js.git"
+  },
+  "keywords": [
+    "jacy",
+    "highlight.js"
+  ],
+  "author": "hazer-hazer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacylang/jacy.highlight.js/issues"
+  },
+  "homepage": "https://github.com/jacylang/jacy.highlight.js#readme"
+}
