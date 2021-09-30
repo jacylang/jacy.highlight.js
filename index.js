@@ -297,8 +297,8 @@ function jacy(hljs) {
                 }
             },
             {
-                className: "punctuation",
-                begin: '->'
+                className: "operator",
+                begin: /->|=>/
             },
             FUNCTION_INVOKE
         ]
