@@ -111,7 +111,7 @@ function jacy(hljs) {
         "Option",
         "Result",
         "String",
-        "Vec"
+        "Vec",
     ];
 
     const OPS_RE = [
@@ -158,8 +158,9 @@ function jacy(hljs) {
         '...',
         '|>',
         '$',
-        '@'
-    ].map(op => op.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')).join('|');
+        '@',
+    ]
+    // ].map(op => op.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')).join('|');
 
     return {
         name: 'Jacy',
@@ -169,7 +170,8 @@ function jacy(hljs) {
             type: TYPES,
             keyword: KEYWORDS,
             literal: LITERALS,
-            built_in: BUILTINS
+            built_in: BUILTINS,
+            operator: OPS_RE,
         },
         illegal: '</',
         contains: [
@@ -179,7 +181,7 @@ function jacy(hljs) {
             }),
             hljs.inherit(hljs.QUOTE_STRING_MODE, {
                 begin: /b?"/,
-                illegal: null
+                illegal: null,
             }),
             {
                 className: 'string',
@@ -195,10 +197,6 @@ function jacy(hljs) {
             {
                 className: 'symbol',
                 begin: /'[a-zA-Z_][a-zA-Z0-9_]*/
-            },
-            {
-                className: 'operator',
-                begin: OPS_RE,
             },
             {
                 className: 'number',
@@ -282,7 +280,7 @@ function jacy(hljs) {
             },
             {
                 begin: [
-                    /(?:trait|enum|struct|union|impl|for)/,
+                    /(?:trait|enum|struct|union|impl|for|mod)/,
                     /\s+/,
                     hljs.UNDERSCORE_IDENT_RE
                 ],
