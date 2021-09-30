@@ -1,6 +1,6 @@
 {
   "name": "@jacy-lang/jacy.highlight.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Jacy grammar for highlight.js",
   "main": "index.js",
   "scripts": {},
